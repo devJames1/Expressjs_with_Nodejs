@@ -25,3 +25,20 @@
 
 
 // app.listen(8000, () => console.log('Listening on port 8000'))
+
+
+
+// TEMPLATING IN EXPRESSJS
+
+//using EJS
+
+const express = require('express')
+const app = express()
+
+app.set('view engine', 'ejs')
+
+app.get('/', (req, res) => {
+    res.render('index.ejs', {'name': 'John Doe'})
+})
+
+app.listen(8000, () => console.log('Listenng on port 8000'))
